@@ -1,0 +1,410 @@
+JAVASCRIPT (Linguagem interpretada)  - JS
+	Criador: Brendan Eich
+
+NO JAVASCRIPT, VOCÊ PODE MANIPULAR
+	° Conteúdo
+	° Apresentação
+	° Navegador - Ambiente de hospedagem
+		      Referência necessáia (Objetos)
+
+NO JAVASCRIPT, VOCÊ TAMBÉM PODE INTERAGIR
+	° Usuário
+	° Formulário
+	° Linguagens dinâmicas (Ajax)
+
+NO JAVASCRIPT NÃO TEM 
+	° Classe
+	° Construtor
+	° Método
+	° Módulo
+______________________________________________________________________________
+
+OPERADORES MATEMÁTICOS
+------------------------
+
+Soma +
+Subtração - 
+Multiplicação * 
+Divisão /
+Módulo (resto da divisão) %
+
+Incremento ++
+Decremento --
+______________________________________________________________________________
+
+OPERADORES DE COMPARAÇÃO
+-------------------------
+
+Igual ==
+Diferente !=
+Maior >
+Menos <
+Identidade === 
+	*Verifica o tipo de dado e tbm o valor
+Identidade diferente !==
+______________________________________________________________________________
+
+OPERADORES LÓGICOS
+-----------------------
+
+E &&
+Ou ||
+Não !
+______________________________________________________________________________
+
+OPERADORES DE ATRIBUIÇÃO
+-------------------------
+
+Soma  +=
+Subtração -=
+Divisão /=
+Multiplicação *=
+Módulo %=
+______________________________________________________________________________
+
+VARIÁVEL (Espaço na memória)
+----------------------------
+	ex: var nomeDaVariavel;
+
+° Formas de declarar:
+	$nomeDaVariavel - (biblioteca e framework, ex: Jquery)
+	_nomeDaVariavel - (dentro da função - Membro privado)
+
+° Tipo de variáveis:
+	String - var nomeDaVariavel = "Apple";
+	Number - var nome = 13;
+	Boolean -  var nome = true;
+
+**caselcase
+______________________________________________________________________________
+
+TIPO DE DADOS (Uso de memória)
+-------------------------------
+
+° Texto (String) - STRING API
+	Declaração - var nomeDaVariavel = "Apple";
+		     var nomeDaVariavel = 'Apple';
+
+	* STRING API
+		varNome.charAt(num); // e 
+		varNome.charCodeat(num); //65
+		varNome.concat("!"); //"Alessandra!"
+		varNome.indexOf('a'); //2
+		varNome.replace('Alessandra','!'); // "!"
+		varNome.split('e'); //['Al','ssandra']
+
+° Numérico(Number)
+	Declaração - var nomeDaVariavel = 13;
+	
+	* NUMBER API
+		varNome.toExponencial(num); //100
+		varNome.toFixed(num); //10.00
+		varNome.toPrecision(num); //VER OQ É ?
+		varNome.toString; //"10"
+		varNome.valueOf(); //10
+
+° Boolean (True ou False)
+	Declaração - var nomeDaVariavel = true;
+		     var nomeDaVariavel = 0;
+		     var nomeDaVariavel = false;
+		     var nomeDaVariavel = 1;
+
+	* BOOLEAN API 
+		varNome.toString();
+		varNome.valueOf();
+° Constantes 
+	Declaração - const nomeDaVariavel = 13;
+______________________________________________________________________________
+
+DATA COMPOSTA
+-------------------------	
+
+	° Undefined - Propriedade de um objeto sem definição de valor;
+	° Null - Não há valores;
+	° Infinity - Número que passa do valor da própria linguagem;
+	° \n ou \" Caracter de scape
+______________________________________________________________________________
+
+OBJETOS - (Coleção dinâmica de chaves e valores)
+
+Pode adicionar ou remover propriedades quando necessário
+-------------------------------------------------------------
+
+	Declaração - var pessoa = {};
+
+		     var pessoa = {
+		      nome = "Alessandra",
+		      idade = 21, 
+		     };
+
+		     var pessoa = {
+		      nome: "Alessandra",
+		      endereco: {
+			rua: "Amaro Alves",
+			num: 448,
+			bairro: "Novo"
+		       }
+		     };
+
+		     var pessoa = {nome: "Alessandra", idade: 21};
+		
+		     var pessoa = new Object();
+		     var pessoa = Object.create();
+
+	* Atribuições á um objeto:
+
+		pessoa.nome = "Alessandra";
+		pessoa["nome"] = "Alessadra"; //Assim vc usa como quiser
+		pessoa.endereco.bairro = "Jd.Novo";
+		pessoa["endereco"]["bairro"] = "Jd.Novo";
+		pessoa.endereco["bairro"] = "Jd.Novo";
+	
+	* Acessando á um objeto:
+
+		pessoa;
+		pessoa.nome;
+		pessoa["nome"];
+
+	* Apagar/deletar propriedades de um objeto:
+		
+		delete pessoa.nome;
+______________________________________________________________________________
+
+ARRAY (Listas ordenadas de  variáveis que relacionam itens por indices)
+
+Objetos especiais que podem ser acessados e manipulados
+-------------
+
+	Declaração - var listaFrutas = [];
+		     var listaFrutas = ["Uva", "Morango"]; - Inline
+		
+		     var listaFrutas = new Array();
+		     
+		     var lsitaFrutas = new Array(5);
+
+		     var listaFrutas = Array("Uva", "Morango"); - Inline
+			* Começa a contagem a partir do zero;
+
+		     var listaFrutas = Array();
+		     var listaFrutas[1] = "Uva";
+		     var listaFrutas[2] = "Morango";
+
+	* ARRAY MULTIDIMENCIONAL
+		     var listaFrutas = Array();
+		     var listaFrutas["frutas"] = Array();
+		     var listaFrutas["frutas"][1] = "Melancia"; 	     
+	
+	Inserindo elementos - listaFrutas[0] = "Morango";
+			      listaFrutas["frutas"][1];
+		
+	Invocando Array - 
+		     documento.write(listaFrutas[2]);
+
+	ARRAY API - 
+		     var carros = ["Ka", "Tipo", "Sapão"];
+
+		     carros.valueOf(); //["Ka", "Tipo", "Sapão"];
+		     carros.toString(); //'Ka, Tipo, Sapão'
+		     carros.length; //3
+		     carros.push("Gol") //4
+		     carros.pop(); //'Gol'
+		     carros.unshift("Gol"); //4
+		     carros.shift(); //'Ka'
+		     carros.indexOf("Ka") //1
+			
+		     carros.forEach(function (elemento)
+			console.log(elementos);
+		     )}; //ka, Corsa, Sonic, Palio
+
+		     carros.filter(function (elemento){
+			return elemento.marca === "Ford";
+		     }); // [marca: 'Ford', modelo: 'Ka'];
+
+		     carros.every(function (elemento){
+			return elemento.marca === "Ford";
+		     }); // false
+
+		     carros.some(function (elemento){
+			return elemento.marca === "Ford";
+		     }); // true
+
+		     carros.map(function (elemento){
+			return elemento.marca;
+		     }); // ['Ford', 'Chevrolet', 'Fiat']
+
+		     carros.reduce(function (prev, cur){
+			return prev + cur.preco;
+		     }, 0); // 95550 (soma)
+			
+		     var veiculos = carros.concat(motos);
+		     veiculos.toString(); //['Ka', 'Corsa'...]	
+
+		     carros.slice(0,2); //['Ka', 'Corsa']
+			* índice -1 e começa de  0
+
+		     carros.reverse();
+			* Altera a array original
+
+		     carros.sort(function (a, b){
+			return a.preco - b.preco;
+		     });
+
+		     carros.join(";"); //"Ka; Corsa; Palio; Gol"
+
+		     REMOVER
+		     carros.splice(posição,removeQuantos);
+		     carros.slice(1,1); //['Tipo']
+			
+	             SUBSTITUIÇÃO
+		     carros.splice(posição,substituiQuantos, "adicionaQuem");
+		     carros.splice(1,1,"Templa");
+
+		     ADICIONA
+		     carros.splice(posição, 0, "adicionaQuem");
+		     carros.splice(1,0,"Variante");
+
+
+Obs: Em JAVASRCIPT não tem array de tamanho FIXO, mas sim definição de numero de array inicial;			
+______________________________________________________________________________
+
+FUNÇÃO - (um objeto que contém  bloco isolado de código executável) - 
+----------------------------------
+
+	Declaração - 
+	
+° Function declaration: Carregada ANTES do código ser interpretado, não importa onde é colocada;
+
+		    function somaValores(a,b){
+			return a + b;
+		     }
+
+° Function Expression Named: Carregada DURANTE a interpretação, vem com o nome da função. Função de primeira classe atribuída a uma variável, passada como  parametro ou ser retornada de uma outra função.
+
+		     var somaValores = function somaValores(a,b){
+			return a + b;
+		     };
+
+° Function Expression anônima: Sem o nome da função
+
+		     var somaValores = function(a,b){
+			return a + b;
+		     };
+
+	Invocando Função - 
+
+Diretamente: 	
+			somaValores(2,2);
+
+Parametro: 
+			function(produto,formulaImposto){
+				conteudo;
+
+			}
+Retornando uma função:
+			var mensagemUsuario = function(){
+				return function(){
+					return "hello";
+				};
+			};
+			console.log(helloWord()());
+
+Por meio de um objeto:
+			var pessoa = {
+				nome: "Alessandra",
+				idade: 21,
+				getIdade: function(){
+					return this.idade;
+				}
+			};
+			pessoa.getIdade();
+
+			var getIdade = function(){
+				return this.idade;
+			}
+			var pessoa = {
+				nome: "Alessandra",
+				idade: 21,
+				getIdade: getIdade
+			};
+			pessoa.getIdade();
+
+Função com call e apply:
+	Eles são utilizados para indicar em qual escopo uma função deve ser executada.
+	Call - Chama a função, pode passar para esta chamada o escopo
+			
+			getIdade.call(pessoa); //20
+			getIdade.call(pessoa, 2);
+
+	Apply - Tem a mesma função que o call
+			
+			getIdade.apply(pessoa, [2]);
+
+Função por meio do operador new: (constância funções)
+
+FUNÇÕES FÁBRICA
+	var criarPessoa = function (nome, idade){
+		return{
+			nome: nome,
+			idade: idade
+		}
+	}
+	console.log(criarPessoa("Alessandra", 20));	
+	
+ex: LAMBDA
+
+	var produto = {nome: 'Sapato', preco: 150};
+
+	function formulaImpostoA (preco){
+		return preco * 0.1; //15	
+	}
+	function formulaImpostoB (preco){
+		return preco * 0.2; 
+	}
+
+	function calcularPreco (produto,formulaImposto){
+		return produto.preco + formulaImposto(produto.preco);
+	}
+
+	calculaPreco(produto, formulaImpostoA); //165
+	calculaPreco(produto, formulaImpostoB); //180
+______________________________________________________________________________
+
+ESTRUTURA CONDICIONAIS
+---------------------------
+	If/Else
+	Switch
+		ex:	switch(){
+				case 1:
+				break;
+
+				default:
+				break;
+			}
+			
+	
+	Ternário ?:
+		ex: var x = (idade >= 18)? "maior":"menor";
+___________________________________________________________________________
+
+ESTRUTURA REPETIÇÃO (LOOPS)
+----------------------------
+
+	Declaração -  
+			for(var i = 0; i < pessoa.length; i++){
+				conteudo;
+			}
+	
+			forEach(function (parametro){
+				conteudo;
+			});
+
+			var i = 0;
+			while(i < pessoa.length){
+				conteudo;
+				i++;
+			}
+
+			var i = 0;
+			do{
+				conteudo;
+			}while(i < pessoa.length);
