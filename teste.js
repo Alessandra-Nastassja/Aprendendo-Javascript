@@ -10,6 +10,7 @@ function calcularNota(nota){
   }else{
     console.log("Aprovado");
   }
+  
 }
 const p1 = 6.0;
 calcularNota(p1);
