@@ -12,7 +12,18 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+      const div = document.querySelector('div')
+      div.innerHTML = "Texto lindao"
+      //div.outerHTML = "Hey" //altera texto e elemento
+      div.insertAdjacentHTML('beforebegin', '<p> Lindaão deste do inicio</p>')
+      div.insertAdjacentHTML('afterbegin', '<span> É bonito para dedeu </span> <br>')
+      div.insertAdjacentHTML('beforeend', '<p> Tu viu q só lindo demais</p>')
+      div.insertAdjacentHTML('afterend', '<p>Depois de ser lindao </p>')
+
+      //----------------------------------------------------------------------
+
+      console.log(div.innerHTML)
+      console.log(div.innerText)
     </script>
 </body>
 
